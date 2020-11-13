@@ -7,25 +7,26 @@ const contatosSchema = new Schema({
         auto: true, // automatico
         required: true //obrigatorio
     },
-    nome:{
+    nome: {
         type: String,
         required: true
     },
-    celular:{
+    celular: {
         type: String,
         required: true
     },
-    dataNascimento:{
+    dataNascimento: {
         type: Date,
         required: true
     },
-    fotoPerfil:{
+    fotoPerfil: {
         type: String,
         required: false
     }
+},
+    { collection: "contatos" }
+)
 
-})
-
-const contatoCollection = mongoose.model('contato', contatosSchema);
+const contatoCollection = mongoose.model('contatos', contatosSchema);
 
 module.exports = contatoCollection;
